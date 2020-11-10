@@ -299,6 +299,7 @@ h2 {
 
 .contact {
   text-align: center;
+  background: center/cover no-repeat;
   // &__title {}
   &__text {
     max-width: 33.3%;
@@ -316,6 +317,7 @@ h2 {
   }
   &__input {
     background-color: rgba(119, 216, 211, .5);
+    border: none;
     border-left: .4em solid transparent;
     outline: none;
     margin-bottom: 1em;
@@ -324,10 +326,17 @@ h2 {
     @include hover {
       background-color: rgba(119, 216, 211, 1);
       border-left: .4em solid #355b82;
+      outline: none;
     }
     &::placeholder {
       color: $light;
     }
+  }
+  &__inner {
+    display: flex;
+  }
+  &__btn {
+    margin-left: 20%;
   }
   &__info {
     width: calc(50% - 85px);
