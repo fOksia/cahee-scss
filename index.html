@@ -150,22 +150,29 @@
         <button class="btn btn--blog">VIEW MORE</button>
       </div>
     </section>
-    <section class="section contact" style="background-image: url(img/form.jpg);">
+    <section id="contact" class="section contact" style="background-image: url(img/form.jpg);">
       <div class="container">
         <h2 class="contact__title">Contact</h2>
         <div class="contact__text">
           <p>For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
         </div>
-        <form class="contact__form" action="" method="POST">
-          <input class="contact__input" type="text" name="name" placeholder="Your fullname" required>
-          <input class="contact__input" type="email" name="email" placeholder="Your email..." required>
-          <input class="contact__input" type="phone" name="phone" placeholder="Your phone number..." required>
-          <textarea class="contact__input" name="message" cols="30" rows="10" placeholder="Your message..."></textarea>
-          <!-- <button type="submit"></button>
-          <button type="reset"></button> -->
-        </form>
-        <div class="contact__info">
-
+        <div class="contact__wrap">
+          <form class="contact__form" action="" method="POST">
+            <input class="contact__input" type="text" name="name" placeholder="Your fullname" required>
+            <input class="contact__input" type="email" name="email" placeholder="Your email..." required>
+            <input class="contact__input" type="phone" name="phone" placeholder="Your phone number..." required>
+            <textarea class="contact__input" name="message" cols="30" rows="10" placeholder="Your message..."></textarea>
+            <!-- <button type="submit"></button>
+            <button type="reset"></button> -->
+          </form>
+          <div class="contact__info">
+            <div class="contact__caption">ADDRESS</div>
+              <div class="contact__descr">123 City name, Street, City, Country</div>
+            <div class="contact__caption">EMAIL</div>
+            <div class="contact__descr">cahee@domain.com</div>
+            <div class="contact__caption">PHONE</div>
+            <div class="contact__descr">+012 345 6789</div>
+        </div>
         </div>
       </div>
     </section>

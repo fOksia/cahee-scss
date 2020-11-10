@@ -304,15 +304,40 @@ h2 {
     max-width: 33.3%;
     margin: 0 auto 2.5em;
   }
+  &__wrap {
+    display: flex;
+    text-align: left;
+  }
   &__form {
     width: calc(50% - 85px);
     display: flex;
     flex-direction: column;
+    margin-right: 13%;
   }
   &__input {
-    
+    background-color: rgba(119, 216, 211, .5);
+    border-left: .4em solid transparent;
+    outline: none;
+    margin-bottom: 1em;
+    padding: 1em 1.3em;
+    font-size: 1.5rem;
+    @include hover {
+      background-color: rgba(119, 216, 211, 1);
+      border-left: .4em solid #355b82;
+    }
+    &::placeholder {
+      color: $light;
+    }
   }
-  // &__info {}
+  &__info {
+    width: calc(50% - 85px);
+  }
+  &__caption {
+    font-weight: 700;
+  }
+  &__descr {
+    margin: -.3em 0 .5em;
+  }
 }
 
 .footer {
