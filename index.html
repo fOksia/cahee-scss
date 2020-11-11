@@ -10,40 +10,42 @@
 </head>
 
 <body>
-  <header id="home" class="header" style="background-image: url(img/home-bg.jpg);">
+  <header class="header">
     <div class="container">
-      <div class="header__top">
+      <nav class="nav">
         <a href="#home">
           <svg class="logo logo--dark" width="127" height="52">
             <use xlink:href="#logo"/>
           </svg>
         </a>
-        <nav class="nav">
-          <ul class="nav__menu">
-            <li class="nav__item"><a class="nav__link" href="#home">HOME</a></li>
-            <li class="nav__item"><a class="nav__link" href="#about">ABOUT</a></li>
-            <li class="nav__item"><a class="nav__link" href="#services">SERVICES</a></li>
-            <li class="nav__item"><a class="nav__link" href="#gallery">GALLERY</a></li>
-            <li class="nav__item"><a class="nav__link" href="#blog">BLOG</a></li>
-            <li class="nav__item"><a class="nav__link" href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__bottom">
-          <h1 class="header__title">Fresh Life</h1>
-          <div class="header__text">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#home">HOME</a></li>
+          <li class="menu__item"><a class="menu__link" href="#about">ABOUT</a></li>
+          <li class="menu__item"><a class="menu__link" href="#services">SERVICES</a></li>
+          <li class="menu__item"><a class="menu__link" href="#gallery">GALLERY</a></li>
+          <li class="menu__item"><a class="menu__link" href="#blog">BLOG</a></li>
+          <li class="menu__item"><a class="menu__link" href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="home" style="background-image: url(img/home-bg.jpg);">
+      <div class="container">
+        <div class="home__wrap">
+          <h1 class="home__title">Fresh Life</h1>
+          <div class="home__text">
             <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
           </div>
           <button class="btn">GET FREE NOW</button>
-        <a href="#main">
+        </div>
+        <a href="#about">
           <svg class="scroll" width="23" height="37">
             <use xlink:href="#scroll"/>
           </svg>
         </a>
       </div>
-    </div>
-  </header>
-  <main id="main">
+    </section>
     <section id="about" class="section about">
       <div class="container">
         <div class="about__wrap">
@@ -131,21 +133,30 @@
           <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
         </div>
         <div class="blog__articles">
-          <article class="blog__article">
-            <time class="blog__data">20<span>NOV</span></time>
-            <h3 class="blog__caption">Green Smoothies: Too Much of a Good Thing?</h3>
-            <time class="blog__time">By Auskteez - <span>2 hours ago</span></time>
-          </article>
-          <article class="blog__article">
-            <time class="blog__data">14<span>NOV</span></time>
-            <h3 class="blog__caption">Growing Food and a “Thirst” for Innovation</h3>
-            <time class="blog__time">By Auskteez - <span>3 hours ago</span></time>
-          </article>
-          <article class="blog__article">
-            <time class="blog__data">10<span>NOV</span></time>
-            <h3 class="blog__caption">Pesticides & Food: What You Need to Know</h3>
-            <time class="blog__time">By Auskteez - <span>6 hours ago</span></time>
-          </article>
+          <a class="blog__link" href="#">
+            <article class="blog__article">
+              <time class="blog__data">20<span>NOV</span></time>
+              <h3 class="blog__caption">Green Smoothies: Too Much of a Good Thing?</h3>
+              <time class="blog__time">By Auskteez - <span>2 hours ago</span></time>
+              <img src="img/blog/blog1.jpg" alt="">
+            </article>
+          </a>
+          <a class="blog__link" href="#">
+            <article class="blog__article">
+              <time class="blog__data">14<span>NOV</span></time>
+              <h3 class="blog__caption">Growing Food and a “Thirst” for Innovation</h3>
+              <time class="blog__time">By Auskteez - <span>3 hours ago</span></time>
+              <img src="img/blog/blog2.jpg" alt="">
+            </article>
+          </a>
+          <a class="blog__link" href="#">
+            <article class="blog__article">
+              <time class="blog__data">10<span>NOV</span></time>
+              <h3 class="blog__caption">Pesticides & Food: What You Need to Know</h3>
+              <time class="blog__time">By Auskteez - <span>6 hours ago</span></time>
+              <img src="img/blog/blog3.jpg" alt="">
+            </article>
+          </a>
         </div>
         <button class="btn btn--blog">VIEW MORE</button>
       </div>
@@ -163,8 +174,8 @@
             <input class="contact__input" type="phone" name="phone" placeholder="Your phone number..." required>
             <textarea class="contact__input" name="message" cols="30" rows="10" placeholder="Your message..."></textarea>
             <div class="contact__inner">
-              <button class=" contact__input contact__btn" type="submit">Send</button>
-              <button class=" contact__input contact__btn" type="reset">Reset</button>
+              <button class=" contact__input" type="submit">Send</button>
+              <button class=" contact__input" type="reset">Reset</button>
             </div>
           </form>
           <div class="contact__info">
