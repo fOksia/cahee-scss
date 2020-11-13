@@ -18,13 +18,21 @@
             <use xlink:href="#logo"/>
           </svg>
         </a>
+
+        <input type="checkbox" name="toggler-input" id="toggler-input">
+        <label id="toggler" for="toggler-input">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
         <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="#home">HOME</a></li>
-          <li class="menu__item"><a class="menu__link" href="#about">ABOUT</a></li>
-          <li class="menu__item"><a class="menu__link" href="#services">SERVICES</a></li>
-          <li class="menu__item"><a class="menu__link" href="#gallery">GALLERY</a></li>
-          <li class="menu__item"><a class="menu__link" href="#blog">BLOG</a></li>
-          <li class="menu__item"><a class="menu__link" href="#contact">CONTACT</a></li>
+          <li class="menu__item"><a class="menu__link" href="#home" onclick="closeMenu()">HOME</a></li>
+          <li class="menu__item"><a class="menu__link" href="#about" onclick="closeMenu()">ABOUT</a></li>
+          <li class="menu__item"><a class="menu__link" href="#services" onclick="closeMenu()">SERVICES</a></li>
+          <li class="menu__item"><a class="menu__link" href="#gallery" onclick="closeMenu()">GALLERY</a></li>
+          <li class="menu__item"><a class="menu__link" href="#blog" onclick="closeMenu()">BLOG</a></li>
+          <li class="menu__item"><a class="menu__link" href="#contact" onclick="closeMenu()">CONTACT</a></li>
         </ul>
       </nav>
     </div>
@@ -210,6 +218,12 @@
 
 
   <script src="https://kit.fontawesome.com/16c6f70756.js" crossorigin="anonymous"></script>
+
+  <script>
+    function closeMenu() {
+      document.querySelector('#toggler').click();
+    }
+  </script>
 
   <svg style="display: none;">
     <symbol id="logo" viewBox="0 0 127 52">
