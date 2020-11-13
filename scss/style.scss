@@ -57,9 +57,18 @@ h2 {
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
   max-width: 50%;
   padding: 0;
+  @include media(1054px) {
+    max-width: 60%;
+  }
+  @include media(880px) {
+    max-width: 70%;
+  }
+  @include media(768px) {
+    display: none;
+  }
   &__item {
     list-style: none;
     position: relative;
@@ -82,6 +91,7 @@ h2 {
     font-weight: 700;
     font-size: 1.6rem;
     text-transform: uppercase;
+    padding: 20px 10px;
   }
 }
 
@@ -104,13 +114,43 @@ h2 {
   background: center right/cover no-repeat;
   display: flex;
   align-items: center;
+  @include media(880px) {
+    background: center/cover no-repeat;
+  }
+  @include media(576px) {
+    background: none
+  }
+  &__wrap {
+    @media screen and (min-width: 1187px) {
+      transform: translateX(-7%);
+    }
+    @include media(576px) {
+      text-align: center;
+    }
+  }
   &__title {
     font-size: 6rem;
     font-weight: 900;
+    @include media(576px) {
+      margin: 0;
+    }
+    @include media(320px) {
+      font-size: 5rem;
+    }
   }
   &__text {
     line-height: 1.59;
     max-width: 33.3%;
+    @include media(880px) {
+      max-width: 50%;
+    }
+    @include media(768px) {
+      max-width: 62%;
+    }
+    @include media(576px) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
   }
 
 }
@@ -137,6 +177,9 @@ h2 {
   max-width: 190px;
   display: block;
   cursor: pointer;
+  @include media(576px) {
+    margin: 0 auto;
+  }
   @include media(320px) {
     max-width: 150px;
     padding: .5em;
@@ -146,6 +189,11 @@ h2 {
     background-color: transparent;
     color: $brand;
     border: 2px solid $brand;
+  }
+  &--home {
+    @include media(576px) {
+      margin-top: 60px;
+    }
   }
   &--gallery {
     background-color: $blue;
@@ -222,7 +270,7 @@ h2 {
       transform: translate(-50%, -50%);
       z-index: -1;
     }
-    @include media(320px) {
+    @include media(576px) {
       display: none;
     }
     & img {
@@ -256,7 +304,7 @@ h2 {
       width: 100%;
       padding: .7em 3.5em;
     }
-    @include media(320px) {
+    @include media(576px) {
       padding: 0;
     }
   }
@@ -285,9 +333,6 @@ h2 {
   &__text {
     width: 75%;
     padding: 5%;
-    @include media(768px) {
-      
-    }
   }
   &__icon {
     width: 25%;
@@ -321,7 +366,6 @@ h2 {
 .gallery {
   background-color: #ffe92f;
   text-align: center;
-  // &__title {}
   &__text {
     max-width: 51%;
     @include media(768px) {
@@ -332,24 +376,31 @@ h2 {
   }
   &__photos {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    @include media(576px) {
+      padding: 0 5%;
+    }
   }
   &__photo {
     margin: .9em;
     width: calc(50% - .9em * 2);
+    overflow: hidden;
     @include media(768px) {
       margin: .3em;
     }
-    @include media(320px) {
+    @include media(576px) {
       width: 100%;
     }
     & img {
+      height: 100%;
       width: 100%;
       box-shadow: $shadow;
+      object-fit: cover;
     }
     &--2-3 {
       width: calc(66.6% - .9em * 2);
-      @include media(320px) {
+      @include media(576px) {
         width: 100%;
       }
     }
@@ -358,11 +409,14 @@ h2 {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      @include media(320px) {
+      @include media(576px) {
         width: 100%;
       }
     }
-  }  
+  }
+  &__photosm:first-child {
+    margin-bottom: .9em;
+  }
 }
 
 .subscribe {
@@ -423,16 +477,21 @@ h2 {
   }
   &__articles {
     display: flex;
-    @include media(320px) {
+    flex-wrap: wrap;
+    @include media(1177px) {
+      justify-content: center;
+    }
+    @include media(1178px) {
     flex-wrap: wrap;
     }
   }
   &__link {
     text-decoration: none;
+    display: block;
   }
   &__article {
     min-height: 300px;
-    max-width: 375px;
+    width: 350px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -442,15 +501,32 @@ h2 {
     padding: 1.2em;
     background-image: linear-gradient(to top, rgba(0,0,0, .5) 35%,  transparent 50%);
     margin: 0 .8em;
+    box-shadow: 0 0 10px rgba(0,0,0, .5);
+    @include media(1178px) {
+      margin: 10px;
+    }
+    @include media(389px) {
+      margin: 5px;
+      width: 100%;
+      min-height: 270px;
+    }
+    @include hover {
+      box-shadow: 0 0 20px rgba(0,0,0, 1);
+      img {
+        @include tr;
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
     & img {
-      min-width: 100%;
-      min-height: 100%;
+      width: 100%;
+      height: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
       z-index: -1;
+      object-fit: cover;
     }
   } 
   &__data {
@@ -570,7 +646,7 @@ h2 {
     svg {
       width: 60px;
       height: 26px;
-      @include media(320px) {
+      @include media(576px) {
         margin: 5px auto;
       }
     }
@@ -578,7 +654,7 @@ h2 {
   &__wrap {
     display: flex;
     justify-content: space-between;
-    @include media(320px) {
+    @include media(576px) {
       flex-direction: column-reverse;
       text-align: center;
     }
