@@ -244,7 +244,7 @@ h2 {
   text-align: center;
   @include media(768px) {
     position: relative;
-    padding-top: 50px;
+    padding-top: 90px;
   }
   @include media(320px) {
     font-size: 1.5rem;
@@ -331,6 +331,7 @@ h2 {
     width: 100%;
     @include media(768px) {
       transform: translateX(-50%);
+      margin: 20px 0;
     }
   }
 }
