@@ -415,6 +415,10 @@ h2 {
       text-align: center;
       padding: 3.65em 0 4.41em;
     }
+    @include media(490px) {
+      background-image: url(../img/bgsubscrsm1.jpg) !important;
+      background: center/cover no-repeat;
+    }
   }
   &__title {
     font-size: 2.35em;
@@ -478,6 +482,7 @@ h2 {
   &__article {
     min-height: 300px;
     width: 350px;
+    height: 0;
     position: relative;
     overflow: hidden;
     display: flex;
