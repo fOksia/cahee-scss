@@ -1,0 +1,1 @@
+{"version":3,"sources":["ie-style.scss"],"names":[],"mappings":"AACE,eACE,iBAAkB,CAClB,QAAS","file":"ie-style.css","sourcesContent":[".blog {\r\n  &__subject {\r\n    position: absolute;\r\n    bottom: 0;\r\n  }\r\n}"]}

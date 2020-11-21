@@ -1,6 +1,4 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
+.header {
   position: absolute;
   top: 0;
   left: 50%;
@@ -9,6 +7,11 @@
   max-width: 1170px;
   padding: 3em 15px;
   z-index: 5;
+}
+
+.nav {
+  display: flex;
+  // justify-content: space-between;
 }
 
 #toggler, #toggler-input {
