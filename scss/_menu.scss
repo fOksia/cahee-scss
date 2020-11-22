@@ -2,6 +2,7 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 3em 15px;
     position: absolute;
     top: 0;
@@ -25,7 +26,8 @@
   
 }
 
-#toggler-input {
+#toggler-input,
+#toggler {
   display: none;
   &:checked ~ #toggler .header__span:nth-child(1) {
     transform: translateY(17px) rotate(45deg) ;
@@ -41,6 +43,12 @@
     opacity: 1;
   }
 }
+
+  #toggler {
+    @include media(768px) {
+    display: block;
+    }
+  }
 
 .header__span {
   display: block;
